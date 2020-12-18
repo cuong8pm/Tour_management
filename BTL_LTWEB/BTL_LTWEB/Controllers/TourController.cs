@@ -13,5 +13,9 @@ namespace BTL_LTWEB.Controllers
         {
             return View();
         }
+        public ActionResult test()
+        {
+            return View();
+        }
     }
 }
