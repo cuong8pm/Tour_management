@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "upDate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Update</title>
+    @Styles.Render("~/Content/PageUpdate.css")
+</head>
+@using (Html.BeginForm())
+{
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>@Model.ID</td>
+        </tr>
+        <tr>
+            <td>IMG</td>
+            <td><input name="IMG" value=@Model.IMG_main /></td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td><input name="Title" value=@Model.Title /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input name="price" value=@Model.price /></td>
+        </tr>
+        <tr>
+            <td>Journeys</td>
+            <td><input name="Journeys" value=@Model.Journeys /></td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td><input name="Times" value=@Model.Times /></td>
+        </tr>
+        <tr>
+            <td>Departure</td>
+            <td><input name="Departure" value=@Model.Departure /></td>
+        </tr>
+        <tr>
+            <td>Destination</td>
+            <td><input name="Destination" value=@Model.Destination /></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input name="Contact" value=@Model.Contact /></td>
+        </tr>
+        <tr>
+            <td>Contents</td>
+            <td><input name="Contents" value=@Model.Contents /></td>
+        </tr>
+        <tr>
+            <td>Contents Details</td>
+            <td><input name="Contents_Details" value=@Model.Contents_Details /></td>
+        </tr>
+        <tr>
+            <td>Start day</td>
+            <td><input name="Start_Day" value=@Model.Start_Day /></td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td><input name="Discount" value=@Model.Discount /></td>
+        </tr>
+       
+    </table>
+    <input type="submit" value="upDate"/> 
+}

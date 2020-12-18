@@ -171,6 +171,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\DataHVtravel.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,6 +180,16 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PlacesModel.cs" />
     <Compile Include="Models\RegisModel.cs" />
+=======
+    <Compile Include="Models\DBConnection.cs" />
+    <Compile Include="Models\HVTravel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HVTravel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Model_Tour.cs" />
+>>>>>>> 35f6d03bc7f06172b8af71df9c94ab590bedeb34
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -187,12 +198,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\IMG\logo.png" />
     <Content Include="Content\Layout.css" />
+    <Content Include="Content\PageUpdate.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+<<<<<<< HEAD
     <Content Include="Models\DataHVtravel.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataHVtravel.designer.cs</LastGenOutput>
@@ -201,6 +214,13 @@
     <None Include="Models\DataHVtravel.dbml.layout">
       <DependentUpon>DataHVtravel.dbml</DependentUpon>
     </None>
+=======
+    <Content Include="Models\HVTravel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HVTravel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+>>>>>>> 35f6d03bc7f06172b8af71df9c94ab590bedeb34
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -241,10 +261,14 @@
     <Content Include="Views\Account\View1.cshtml" />
     <Content Include="Views\Tour\Index.cshtml" />
     <Content Include="Views\Shared\Layout.cshtml" />
-    <Content Include="Views\Tour\test.cshtml" />
     <Content Include="Views\Admin\HomePage.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Regis\Index.cshtml" />
     <Content Include="Views\Places\Index.cshtml" />
+=======
+    <Content Include="Views\Tour\Tour_Page.cshtml" />
+    <Content Include="Views\Tour\upDate.cshtml" />
+>>>>>>> 35f6d03bc7f06172b8af71df9c94ab590bedeb34
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -259,6 +283,14 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <None Include="Models\HVTravel.dbml.layout">
+      <DependentUpon>HVTravel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+>>>>>>> 35f6d03bc7f06172b8af71df9c94ab590bedeb34
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

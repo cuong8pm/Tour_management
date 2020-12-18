@@ -50,9 +50,14 @@ a {
     color: #222222;
     font-family: 'Times New Roman';
 }
+<<<<<<< HEAD
 li {
     list-style: none;
     border-bottom: 1px solid green;
+=======
+li{
+    list-style:none;
+>>>>>>> 35f6d03bc7f06172b8af71df9c94ab590bedeb34
 }
 .footer{
     width:100%;
