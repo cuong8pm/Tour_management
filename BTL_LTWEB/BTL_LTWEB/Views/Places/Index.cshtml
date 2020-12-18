@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="TitleRegis">Places Management Page</h3>
+<table class="tableRegis" border="1">
+
+    <tr>
+        <td>ID </td>
+        <td>Địa điểm</td>    
+        <td>Action</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>          
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID })|
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ID })|
+                @Html.ActionLink("Xoá", "Delete", new { id = item.ID })|
+            </td>
+        </tr>
+    }
+
+</table>
+

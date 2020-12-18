@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HVTRAVEL" Class="DataHVtravelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ADMIN\SQLEXPRESS;Initial Catalog=HVTRAVEL;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HVTRAVELConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ACCOUNTS" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="username" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLACES" Member="PLACEs">
+    <Type Name="PLACE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PLACE_Tour_Place" Member="Tour_Places" ThisKey="ID" OtherKey="ID_Place" Type="Tour_Place" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOURS" Member="TOURs">
+    <Type Name="TOUR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IMG_main" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Journeys" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Times" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Departure" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Contents_Details" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Start_Day" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TOUR_Tour_Place" Member="Tour_Places" ThisKey="ID" OtherKey="ID_tour" Type="Tour_Place" />
+      <Association Name="TOUR_IMAGE" Member="IMAGEs" ThisKey="ID" OtherKey="TourID" Type="IMAGE" />
+      <Association Name="TOUR_Registration" Member="Registrations" ThisKey="ID" OtherKey="ID_Tour" Type="Registration" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tour_Place" Member="Tour_Places">
+    <Type Name="Tour_Place">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_tour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Place" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PLACE_Tour_Place" Member="PLACE" ThisKey="ID_Place" OtherKey="ID" Type="PLACE" IsForeignKey="true" />
+      <Association Name="TOUR_Tour_Place" Member="TOUR" ThisKey="ID_tour" OtherKey="ID" Type="TOUR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMAGES" Member="IMAGEs">
+    <Type Name="IMAGE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TourID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="TOUR_IMAGE" Member="TOUR" ThisKey="TourID" OtherKey="ID" Type="TOUR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Registration" Member="Registrations">
+    <Type Name="Registration">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Tour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_User" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="TOUR_Registration" Member="TOUR" ThisKey="ID_Tour" OtherKey="ID" Type="TOUR" IsForeignKey="true" />
+      <Association Name="user_Registration" Member="user" ThisKey="ID_User" OtherKey="ID" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="user_Registration" Member="Registrations" ThisKey="ID" OtherKey="ID_User" Type="Registration" />
+    </Type>
+  </Table>
+</Database>

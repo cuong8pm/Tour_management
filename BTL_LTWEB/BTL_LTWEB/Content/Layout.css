@@ -45,13 +45,14 @@
 	background:orange;
 	cursor:pointer;
 }
-a{
-    text-decoration:none;
-    color:#222222;
+a {
+    text-decoration: none;
+    color: #222222;
+    font-family: 'Times New Roman';
 }
-li{
-    list-style:none;
-    border-bottom:1px solid green;
+li {
+    list-style: none;
+    border-bottom: 1px solid green;
 }
 .footer{
     width:100%;
@@ -72,3 +73,13 @@ li{
    padding-top:17px;
    text-align:center;
 }
+.tableRegis{
+    border: 1px solid green;
+    margin-top:20px;
+    margin-left:250px;
+}
+.TitleRegis {   
+    margin-top: 20px;
+    margin-left: 250px;
+}
+
