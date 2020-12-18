@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Tour_Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tour_Page</h2>
+<form>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Img</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Journey</th>
+            <th>Time</th>
+            <th>DepatureD</th>
+            <th>Destination</th>
+            <th>Contact</th>
+            <th>Content</th>
+            <th>Content Detail</th>
+            <th>Start day</th>
+            <th>Discount</th>
+            <th>Update</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.IMG_main</td>
+                <td>@item.Title</td>
+                <td>@item.price</td>
+                <td>@item.Journeys</td>
+                <td>@item.Times</td>
+                <td>@item.Departure</td>
+                <td>@item.Destination</td>
+                <td>@item.Contact</td>
+                <td>@item.Contents</td>
+                <td>@item.Contents_Details</td>
+                <td>@item.Start_Day</td>
+                <td>@item.Discount</td>  
+                <td>@Html.ActionLink("Sửa", "upDate", new { ID = item.ID })|@Html.ActionLink("Xóa","delete","Tour")</td>        
+            </tr>          
+        }
+    </table>
+</form>
+

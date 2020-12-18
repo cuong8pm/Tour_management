@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HVTravel">
+  <DataContextMoniker Name="/HVTravelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8d61e557-9dba-4323-9d3c-9172bd4f952d" absoluteBounds="0.5, 4.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HVTravelDataContext/ACCOUNT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7be76767-1050-4a36-8e9d-35a76c451680" absoluteBounds="0.51500000000000012, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3e070b1-a9bc-4bc5-a861-89597675c83b" absoluteBounds="2.625, 4.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HVTravelDataContext/IMAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="438fe1d0-39b3-4059-a2d8-e07238344b03" absoluteBounds="2.6399999999999997, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc26da44-5727-4606-9b5c-f6ac5a22515b" absoluteBounds="0.5, 2.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HVTravelDataContext/PLACE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0010f9d8-9874-4e19-aed4-1fd230802f95" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81ce47fd-6828-4c98-b037-87a6fec44220" absoluteBounds="5.25, 2.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HVTravelDataContext/Registration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8352c206-7cb5-436f-bcdf-177678bf11a6" absoluteBounds="5.265, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed7029da-7f3e-485f-b4f2-26d5694884bb" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HVTravelDataContext/Tour_Place" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae8b4710-9938-4978-9e65-bb8c4b7609eb" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 2.375); (1.5 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HVTravelDataContext/PLACE/PLACE_Tour_Place" />
+      <nodes>
+        <classShapeMoniker Id="dc26da44-5727-4606-9b5c-f6ac5a22515b" />
+        <classShapeMoniker Id="ed7029da-7f3e-485f-b4f2-26d5694884bb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ca78a200-b1e3-4a18-9a11-f7fe4795ea94" absoluteBounds="2.75, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HVTravelDataContext/TOUR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f958445-2a4f-4e0c-86fc-a0f1d42946d2" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.6875 : 3.80930826822917); (3.6875 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HVTravelDataContext/TOUR/TOUR_IMAGE" />
+      <nodes>
+        <classShapeMoniker Id="ca78a200-b1e3-4a18-9a11-f7fe4795ea94" />
+        <classShapeMoniker Id="e3e070b1-a9bc-4bc5-a861-89597675c83b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 3.15465413411458); (5.25 : 3.15465413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HVTravelDataContext/TOUR/TOUR_Registration" />
+      <nodes>
+        <classShapeMoniker Id="ca78a200-b1e3-4a18-9a11-f7fe4795ea94" />
+        <classShapeMoniker Id="81ce47fd-6828-4c98-b037-87a6fec44220" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.19314697265625); (2.5 : 1.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HVTravelDataContext/TOUR/TOUR_Tour_Place" />
+      <nodes>
+        <classShapeMoniker Id="ca78a200-b1e3-4a18-9a11-f7fe4795ea94" />
+        <classShapeMoniker Id="ed7029da-7f3e-485f-b4f2-26d5694884bb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="385b9285-be0f-4e2d-8a7d-2157f91043f7" absoluteBounds="5.125, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HVTravelDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2353252-29e6-406a-b51d-cfd3a31ffc1b" absoluteBounds="5.1400000000000006, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.1875 : 1.8862939453125); (6.1875 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HVTravelDataContext/user/user_Registration" />
+      <nodes>
+        <classShapeMoniker Id="385b9285-be0f-4e2d-8a7d-2157f91043f7" />
+        <classShapeMoniker Id="81ce47fd-6828-4c98-b037-87a6fec44220" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
